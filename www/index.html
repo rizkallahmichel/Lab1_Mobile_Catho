@@ -1,0 +1,79 @@
+<!-- <!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Recherche Pays</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <section id="home" class="view">
+    <h1>Bienvenue</h1>
+    <button id="countryBtn">Chercher un pays</button>
+  </section>
+
+  <section id="country" class="view" style="display:none">
+    <h2>Recherche d’un pays</h2>
+    <input id="countryInput" placeholder="Nom du pays"/>
+    <button id="searchCountryBtn">Rechercher</button>
+    <div id="countryResult"></div>
+    <button onclick="showView('home')">Accueil</button>
+  </section>
+
+  <script src="js/index.js"></script>
+</body>
+</html> -->
+
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Pokémon Quiz</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <!-- Home -->
+  <section id="home" class="view">
+    <h1>Pokémon Quiz</h1>
+    <button id="startQuizBtn">Jouer au Quiz</button>
+    <button id="leaderboardBtn">Classement</button>
+  </section>
+
+  <!-- Quiz -->
+  <section id="quiz" class="view" style="display:none">
+    <div>
+      <span id="qIndex">1/10</span> |
+      <span id="timer">00:00</span>
+    </div>
+    <canvas id="pokeCanvas" width="250" height="250"></canvas>
+    <div>
+      <input id="answerInput" placeholder="Nom du Pokémon"/>
+      <button id="submitAnswerBtn">Valider</button>
+    </div>
+    <p id="feedback"></p>
+  </section>
+
+  <!-- Result -->
+  <section id="result" class="view" style="display:none">
+    <h2>Résultat : <span id="scoreOut"></span>/10</h2>
+    <input id="playerName" placeholder="Ton nom"/>
+    <button id="saveScoreBtn">Sauvegarder</button>
+    <button onclick="showView('home')">Accueil</button>
+  </section>
+
+  <!-- Leaderboard -->
+  <section id="leaderboard" class="view" style="display:none">
+    <h2>Top 5</h2>
+    <ol id="topList"></ol>
+    <button onclick="showView('home')">Accueil</button>
+  </section>
+
+  <script src="js/draw.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/leaderboard.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

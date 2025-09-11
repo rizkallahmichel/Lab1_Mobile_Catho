@@ -1,0 +1,71 @@
+/* body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #fafafa;
+  text-align: center;
+}
+
+button, input {
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+img {
+  margin-top: 10px;
+  width: 150px;
+  border: 1px solid #ddd;
+}
+
+#countryResult {
+  margin-top: 20px;
+  font-size: 18px;
+} */
+
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+button, input {
+  margin: 8px;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+canvas {
+  margin: 15px auto;
+  display: block;
+  border: 1px solid #ddd;
+}
+
+#feedback {
+  margin-top: 10px;
+  font-weight: bold;
+}
