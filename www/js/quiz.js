@@ -37,9 +37,15 @@ async function nextQuestion(){
   if(state.index>10){
     clearInterval(state.timerInterval);
     $('scoreOut').innerText = state.score;
+    
+    // Vibration de fin de jeu
+    if(window.advancedVibration){
+      advancedVibration.vibrate([200, 100, 200, 100, 200]);
+    }
+    
     showView('result');
     return;
-  }
+}
   $('qIndex').innerText = `${state.index}/10`;
   $('answerInput').value="";
   $('feedback').innerText="";
@@ -61,11 +67,23 @@ async function nextQuestion(){
 function submitAnswer(){
   const guess = $('answerInput').value.trim().toLowerCase();
   if(!guess) return;
+  
   if(guess===state.current){
     state.score++;
     $('feedback').innerText=`Bravo ! C'était ${state.current}`;
+    
+    // Vibration pour bonne réponse
+    if(window.advancedVibration){
+      advancedVibration.vibrate([200]);
+    }
   }else{
     $('feedback').innerText=`Mauvais ! C'était ${state.current}`;
+    
+    // Vibration pour mauvaise réponse
+    if(window.advancedVibration){
+      advancedVibration.vibrate([200, 100, 200]);
+    }
   }
+  
   setTimeout(nextQuestion,1000);
 }
