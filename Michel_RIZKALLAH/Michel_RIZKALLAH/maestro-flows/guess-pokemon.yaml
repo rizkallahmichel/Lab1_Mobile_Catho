@@ -1,0 +1,5 @@
+appId: org.example.project
+---
+- launchApp
+- tapOn: "Fetch Pokemon Name"
+- assertVisible: "Tapez le nom du Pokemon"
