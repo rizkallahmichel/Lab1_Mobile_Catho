@@ -1,4 +1,19 @@
 appId: org.example.project
 ---
 - launchApp
-- copyTextFrom: "Name:"
+- assertVisible:
+    text: "Fetch Pokemon Name"
+- tapOn: "Fetch Pokemon Name"
+- assertVisible:
+    text: "Loading Pokemon..."
+- assertVisible:
+    text: "Un nouveau Pokemon est pret, devinez son nom !"
+- assertVisible:
+    text: "Tapez le nom du Pokemon"
+- tapOn: "Tapez le nom du Pokemon"
+- eraseText
+- inputText: "maestro test"
+- pressKey: back
+- tapOn: "Valider"
+- assertVisible:
+    text: "C'est faux, essayez encore."
